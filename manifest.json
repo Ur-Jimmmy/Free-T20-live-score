@@ -1,0 +1,8 @@
+{
+  "name": "T20 Live Score",
+  "short_name": "T20Score",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f2027",
+  "theme_color": "#0f2027"
+}
