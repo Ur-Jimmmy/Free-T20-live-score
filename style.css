@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  font-size: 22px;
+}
+
+#matches {
+  padding: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.status {
+  color: #00ffae;
+  font-weight: bold;
+}
+
+.ad-container {
+  margin: 20px 0;
+}
+
+footer {
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
