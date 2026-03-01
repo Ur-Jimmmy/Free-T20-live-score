@@ -7,25 +7,37 @@ async function getLiveScores() {
     );
 
     const data = await response.json();
+
+    if (!data || !data.data) {
+      document.getElementById("matches").innerHTML =
+        "<p>No match data available.</p>";
+      return;
+    }
+
     let output = "";
 
     data.data.forEach(match => {
       if (match.matchType === "t20") {
+        const score = match.score && match.score.length > 0
+          ? `${match.score[0].r}/${match.score[0].w}`
+          : "Score unavailable";
+
         output += `
           <div class="card">
             <h3>${match.name}</h3>
             <p class="status">${match.status}</p>
-            <p>${match.score ? match.score[0].r + "/" + match.score[0].w : "Updating..."}</p>
+            <p>${score}</p>
           </div>
         `;
       }
     });
 
-    document.getElementById("matches").innerHTML = output;
+    document.getElementById("matches").innerHTML =
+      output || "<p>No T20 matches found.</p>";
 
   } catch (error) {
     document.getElementById("matches").innerHTML =
-      "<p>Error loading matches.</p>";
+      "<p>API limit reached or network error.</p>";
   }
 }
 
