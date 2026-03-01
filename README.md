@@ -25,4 +25,4 @@ For production, move API key to backend.
 
 ---
 
-Built by Jimmy Valentine 🚀
+Built by Jimmy Valentine (Ejajul) 🚀
